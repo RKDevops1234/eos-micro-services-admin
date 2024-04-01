@@ -26,7 +26,7 @@ spec:
 ) {
     node (label) {
         stage ('Checkout SCM'){
-          git credentialsId: 'git', url: 'https://github.com/RKDevops1234/proj3udmy.git', branch: 'main'
+          git credentialsId: 'git', url: 'https://github.com/RKDevops1234/eos-micro-services-admin.git', branch: 'main'
           container('build') {
                 stage('Build a Maven project') {
                   //withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
