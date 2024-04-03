@@ -1,5 +1,6 @@
 def label = "eosagent"
-def mvn_version = 'M2'
+#def mvn_version = 'M2'
+def mvn_version = 'maven'
 podTemplate(label: label, yaml: """
 apiVersion: v1
 kind: Pod
