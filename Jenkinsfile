@@ -29,10 +29,10 @@ spec:
           git credentialsId: 'git', url: 'https://github.com/RKDevops1234/eos-micro-services-admin.git', branch: 'main'
           container('build') {
                 stage('Build a Maven project') {
-                  //withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
-                   //sh "mvn clean package"
-                  //  }
-                  sh './mvnw clean package' 
+                  withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+                   sh "mvn clean package"
+                   }
+                  //sh './mvnw clean package' 
                    //sh 'mvn clean package'
                 }
             }
