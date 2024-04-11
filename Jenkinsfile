@@ -12,7 +12,7 @@ metadata:
 spec:
   containers:
   - name: build
-    image: rajeshtalla0209/eos-jenkins-agent-base:latest
+    image: rajeshtalla0209/eos-jenkins-agent-base:1.0
     command:
     - cat
     tty: true
