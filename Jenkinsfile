@@ -14,7 +14,9 @@ spec:
   - name: build
     image: rajeshtalla0209/eos-jenkins-agent-base:O2.0
     command:
-    - cat
+    - /usr/sbin/init
+    securityContext:
+      privileges: true
     tty: true
 //    volumeMounts:
 //    - name: dockersock
