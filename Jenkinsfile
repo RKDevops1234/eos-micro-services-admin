@@ -22,7 +22,7 @@ spec:
   volumes:
   - name: dockersock
     hostPath:
-      path: /run/docker.sock
+      path: /var/run/docker.sock
 """
 ) {
     node (label) {
