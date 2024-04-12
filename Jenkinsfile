@@ -18,11 +18,11 @@ spec:
     tty: true
     volumeMounts:
     - name: dockersock
-      mountPath: /var/run/docker.sock
+      mountPath: /var/run
   volumes:
   - name: dockersock
     hostPath:
-      path: /var/run/docker.sock
+      path: /var/run
 """
 ) {
     node (label) {
