@@ -12,7 +12,7 @@ metadata:
 spec:
   containers:
   - name: build
-    image: dpthub/eos-jenkins-agent-base:latest
+    image: rajeshtalla0209/eos-jenkins-agent-base:latest
     command:
     - cat
     tty: true
@@ -77,7 +77,8 @@ spec:
         stage ('Deploy Artifacts'){
           container('build') {
                 stage('Deploy Artifacts') {
-                    sh 'chmod 777 /home/jenkins/agent/workspace/eos-micro-services-admin_main/mvnw'
+                    // Make sure the Maven Wrapper script has executable permissions
+                    sh 'chmod +x mvnw'
                     rtMavenRun (
                     tool: "java", // Tool name from Jenkins configuration
                     useWrapper: true,
