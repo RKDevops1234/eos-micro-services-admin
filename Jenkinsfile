@@ -77,8 +77,8 @@ spec:
         stage ('Deploy Artifacts'){
           container('build') {
                 stage('Deploy Artifacts') {
-                    //sh 'chmod 777 /home/jenkins/agent/workspace/eos-micro-services-admin_main/mvnw'
-                    sh 'chmod 777 /home/jenkins/agent/workspace/eos-micro-services-admin/mvnw'
+                    sh 'chmod 777 /home/jenkins/agent/workspace/eos-micro-services-admin_main/mvnw'
+                    //sh 'chmod 777 /home/jenkins/agent/workspace/eos-micro-services-admin/mvnw'
                     rtMavenRun (
                     tool: "java", // Tool name from Jenkins configuration
                     useWrapper: true,
